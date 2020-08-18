@@ -16,7 +16,7 @@ public class EmbeddingResource {
 	@Autowired
 	private Embedding embedding;
 
-	@GetMapping
+	@GetMapping("/encoder")
 	public ResponseEntity<?> getEmbedding(@RequestParam(value = "input") String input) {
 		String[] s = {input};
 		float[][] output = embedding.embed(s);
